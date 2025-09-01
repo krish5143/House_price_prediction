@@ -1,10 +1,12 @@
-# server.py
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import util
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for API calls
+
+# Load model + columns.json at startup (works locally & on Render)
+util.load_saved_artifacts()
 
 
 @app.route("/")
@@ -41,7 +43,4 @@ def predict_home_price():
 
 if __name__ == "__main__":
     print("Starting Python Flask Server For Home Price Prediction...")
-    util.load_saved_artifacts()
-    # For local dev: localhost:5000
-    # On Render, we won't use app.run(); Render will launch via Gunicorn
     app.run(host="0.0.0.0", port=5000, debug=True)
