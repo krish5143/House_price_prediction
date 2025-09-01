@@ -25,8 +25,8 @@ function onClickedEstimatePrice() {
     var location = document.getElementById("uiLocations").value;
     var estPrice = document.getElementById("uiEstimatedPrice");
 
-    // Use relative URL (works locally + on Render)
-    var url = "/predict_home_price";
+    // ✅ Use full Render backend URL
+    var url = "https://house-price-prediction-model-x677.onrender.com/predict_home_price";
 
     $.ajax({
         url: url,
@@ -55,8 +55,8 @@ function onClickedEstimatePrice() {
 }
 
 function loadLocations() {
-    // Use relative URL
-    var url = "/get_location_names";
+    // ✅ Use full Render backend URL
+    var url = "https://house-price-prediction-model-x677.onrender.com/get_location_names";
 
     $.get(url, function(data, status) {
         if (data && data.locations) {
