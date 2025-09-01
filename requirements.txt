@@ -2,6 +2,8 @@ Flask==3.0.3
 Flask-Cors==3.0.10
 gunicorn==21.2.0
 numpy==1.23.5
+setuptools
+wheel
 pandas==1.0.5
 matplotlib==3.2.2
 scikit-learn==0.22.2.post1
