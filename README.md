@@ -9,6 +9,16 @@ Your project is live and working here:
 🔵 Live App:
 https://house-price-prediction-model-x677.onrender.com
 
+## 🖼️ Demo (UI Screenshot)
+
+Below is a preview screenshot of the application UI:
+
+![Demo Screenshot](house_price_prediction_demo_webapp.png)
+
+
+
+
+
 🛠️ Technical Stack
 Component	Technology	Purpose
 Model	Scikit-learn, Lasso Regression	Regularized model for high-dimensional feature selection.
